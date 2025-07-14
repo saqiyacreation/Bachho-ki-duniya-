@@ -1,158 +1,70 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bacho Ki Duniya</title>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bachho Ki Duniya</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Baloo Bhai 2', cursive;
-      background: #fdf6e3;
-      color: #333;
-    }header {
-  background: #ffcc00;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-}
-
-nav {
-  background: #fff3b0;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #444;
-}
-
-.hero {
-  background: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/children-2690598_960_720.jpg') no-repeat center center/cover;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.hero h2 {
-  font-size: 2.5em;
-}
-
-.section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.section:nth-child(even) {
-  background: #fff;
-}
-
-.section h3 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.gallery img {
-  width: 200px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-}
-
-video {
-  width: 80%;
-  max-width: 600px;
-  margin: 20px auto;
-  display: block;
-}
-
-.download-button {
-  margin-top: 20px;
-  display: inline-block;
-  padding: 10px 20px;
-  background: #ff9900;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer {
-  background: #ffcc00;
-  padding: 20px;
-  text-align: center;
-}
-
+    body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+    header { background-color: #ffcc00; padding: 20px; text-align: center; }
+    header h1 { margin: 0; }
+    nav { background-color: #333; overflow: hidden; }
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav a:hover { background-color: #111; }
+    main { padding: 20px; }
+    .poem-box {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      padding: 15px;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+    .poem-box h2 {
+      margin-top: 0;
+      color: #856404;
+    }
+    .poem-box a {
+      color: #0056b3;
+      font-weight: bold;
+    }
   </style>
-</head><body>
+</head>
+<body>
   <header>
-    <h1>Bacho Ki Duniya</h1>
-    <p>Learn. Play. Grow.</p>
-  </header>  <nav>
-    <a href="#activities">Activities</a>
-    <a href="#stories">Stories</a>
-    <a href="#shop">Shop</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#videos">Videos</a>
-    <a href="#contact">Contact</a>
-  </nav>  <div class="hero">
-    <h2>Welcome to the World of Fun & Learning!</h2>
-  </div>  <div class="section" id="activities">
-    <h3>Fun Activities</h3>
-    <p>Drawing, painting, puzzles, and games to spark creativity!</p>
-  </div>  <div class="section" id="stories">
-    <h3>Interactive Stories</h3>
-    <p>Read and watch beautiful stories created just for kids.</p>
-  </div>  <div class="section" id="shop">
-    <h3>Digital Shop</h3>
-    <p>Coloring books, story downloads, and more fun digital content.</p>
-    <a class="download-button" href="/downloads/sample-story.pdf" download>Download Sample Story</a>
-  </div>  <div class="section" id="gallery">
-    <h3>Kids Gallery</h3>
-    <div class="gallery">
-      <img src="https://cdn.pixabay.com/photo/2017/08/06/03/37/kids-2588590_960_720.jpg" alt="Kids Drawing">
-      <img src="https://cdn.pixabay.com/photo/2016/03/27/07/08/children-1280240_960_720.jpg" alt="Painting Fun">
-      <img src="https://cdn.pixabay.com/photo/2017/08/06/02/47/kids-2588596_960_720.jpg" alt="Play Time"> 
-      <img src="images/drawing1.jpg" alt="Drawing 1"> 
-      <div class="gallery">
-  <a href="https://www.supercoloring.com/coloring-pages/lion" target="_blank">
-    <img src="images/lion.jpg" alt="Color Lion">
-  </a>
-  <a href="https://www.supercoloring.com/coloring-pages/butterfly" target="_blank">
-    <img src="images/butterfly.jpg" alt="Color Butterfly">
-  </a>
-  <a href="https://www.supercoloring.com/coloring-pages/elephant" target="_blank">
-    <img src="images/elephant.jpg" alt="Color Elephant">
-  </a>
-</
+    <h1>Welcome to Bachho Ki Duniya</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="tips.html">Parent Tips</a>
+    <a href="contact.html">Contact</a>
+    <a href="drawing.html">Drawing</a>
+    <a href="abc.html">ABC & 123</a>
+    <a href="rhymes.html">Rhymes</a>
+    <a href="puzzle.html">Puzzles</a>
+  </nav>
+  <main>
+    <h2>Fun Learning Activities for Kids</h2>
+    <ul>
+      <li>🎨 Coloring & Drawing</li>
+      <li>🔢 ABC & 123 Games</li>
+      <li>🎵 Rhymes & Songs</li>
+      <li>🧩 Puzzle Time</li>
+    </ul>
+    <p>Explore interactive content designed for children between ages 1 to 8. Let them learn while having fun!</p>
+
+    <div class="poem-box">
+      <h2>🌟 New Poems Section!</h2>
+      <p>We've added a special poems section for kids aged 1–8. Fun and musical rhymes in English & Hindi.</p>
+      <p><a href="poems.html">Click here to read the poems &rarr;</a></p>
     </div>
-  </div>  <div class="section" id="videos">
-    <h3>Watch and Learn</h3>
-    <video controls>
-      <source src="/videos/sample-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>  <div class="section" id="contact">
-    <h3>Contact Us</h3>
-    <p>Have questions? Reach out anytime: <br> <strong>contact@bachokiduniya.co.in</strong></p>
-  </div>  <footer>
-    <p>&copy; 2025 Bacho Ki Duniya | All Rights Reserved</p>
-  </footer>
-</body></html>
+  </main>
+</body>
+</html>
