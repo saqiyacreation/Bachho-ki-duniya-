@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Login</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8" />
+  <title>Login - Bachon Ki Duniya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h2>Login</h2>
-  <form id="loginForm">
-    <input type="email" id="loginEmail" placeholder="Email" required><br>
-    <input type="password" id="loginPassword" placeholder="Password" required><br>
-    <button type="submit">Login</button>
-  </form>
-  <p>Don't have an account? <a href="register.html">Register here</a></p>
-  <script src="assets/js/auth.js"></script>
+<body class="bg-blue-100">
+  <div class="max-w-md mx-auto mt-20 p-8 bg-white shadow-xl rounded-xl">
+    <h2 class="text-2xl font-bold text-center text-blue-800 mb-6">Login to Your Account</h2>
+    <input id="email" type="email" placeholder="Email" class="w-full p-3 border rounded mb-4" />
+    <input id="password" type="password" placeholder="Password" class="w-full p-3 border rounded mb-4" />
+    <button onclick="login()" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Login</button>
+    <p class="mt-4 text-center text-sm">Don't have an account? <a href="signup.html" class="text-purple-500">Sign up</a></p>
+  </div>
+
+  <script type="module">
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    import { auth } from './scripts/firebase-config.js';
+
+    window.login = function () {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("Login successful!");
+          window.location.href = "dashboard.html";
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    }
+  </script>
 </body>
 </html>
