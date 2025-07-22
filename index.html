@@ -2,51 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bachon Ki Duniya - Learn with Fun!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bachon Ki Duniya - Learn & Shop for Kids</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/images/favicon.png" />
 </head>
 <body class="bg-yellow-50 font-sans">
-  <header class="bg-yellow-300 p-4 shadow-lg">
+
+  <!-- Header -->
+  <header class="bg-yellow-300 p-4 shadow-md">
     <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-purple-800">Bachon Ki Duniya</h1>
+      <h1 class="text-2xl font-bold text-purple-900">🎈 Bachon Ki Duniya</h1>
       <nav class="space-x-4">
-        <a href="#" class="text-purple-700 hover:underline">Home</a>
-        <a href="worksheets.html" class="text-purple-700 hover:underline">Worksheets</a>
-        <a href="games.html" class="text-purple-700 hover:underline">Games</a>
-        <a href="stories.html" class="text-purple-700 hover:underline">Stories</a>
-        <a href="login.html" class="text-purple-700 hover:underline">Login</a>
+        <a href="index.html" class="text-purple-800 hover:underline">Home</a>
+        <a href="stories.html" class="text-purple-800 hover:underline">Stories</a>
+        <a href="games.html" class="text-purple-800 hover:underline">Games</a>
+        <a href="worksheets.html" class="text-purple-800 hover:underline">Worksheets</a>
+        <a href="shop.html" class="text-purple-800 hover:underline">Shop</a>
+        <a href="login.html" class="bg-purple-600 text-white px-4 py-1 rounded hover:bg-purple-700">Login</a>
       </nav>
     </div>
   </header>
 
-  <main class="container mx-auto p-6">
-    <section class="text-center my-10">
-      <h2 class="text-3xl font-bold text-purple-900 mb-4">Welcome to the World of Fun Learning!</h2>
-      <p class="text-lg text-purple-700">Explore stories, games, and activities for kids aged 1 to 8.</p>
-    </section>
+  <!-- Hero Section -->
+  <section class="text-center py-10 bg-gradient-to-br from-yellow-200 to-pink-200">
+    <h2 class="text-4xl font-bold text-purple-800 mb-2">🎓 Learn & 🛍️ Shop – All in One Place!</h2>
+    <p class="text-lg text-purple-700">Enjoy 1000+ stories, games, worksheets & shop fun toys and makeup kits for kids.</p>
+  </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-xl shadow-md p-4 text-center hover:scale-105 transition">
-        <h3 class="text-xl font-semibold text-purple-800">Worksheets</h3>
-        <p>Printable activities for all age groups.</p>
-        <a href="worksheets.html" class="text-blue-600 underline">Explore</a>
+  <!-- Education Features -->
+  <section class="p-6 max-w-7xl mx-auto">
+    <h3 class="text-2xl font-bold text-purple-900 mb-4">🎒 Explore Educational Fun</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl shadow-md p-4 hover:scale-105 transition text-center">
+        <img src="assets/images/stories.png" class="h-32 mx-auto mb-3" alt="Stories">
+        <h4 class="text-lg font-bold text-purple-800">Stories</h4>
+        <p>Read moral, bedtime, animal stories & more!</p>
+        <a href="stories.html" class="text-blue-600 underline">Read Now</a>
       </div>
-      <div class="bg-white rounded-xl shadow-md p-4 text-center hover:scale-105 transition">
-        <h3 class="text-xl font-semibold text-purple-800">Games</h3>
-        <p>Fun learning through interactive games.</p>
+      <div class="bg-white rounded-xl shadow-md p-4 hover:scale-105 transition text-center">
+        <img src="assets/images/games.png" class="h-32 mx-auto mb-3" alt="Games">
+        <h4 class="text-lg font-bold text-purple-800">Games</h4>
+        <p>Learn with ABC tracing, puzzles & fun games.</p>
         <a href="games.html" class="text-blue-600 underline">Play Now</a>
       </div>
-      <div class="bg-white rounded-xl shadow-md p-4 text-center hover:scale-105 transition">
-        <h3 class="text-xl font-semibold text-purple-800">Stories</h3>
-        <p>Enjoy bedtime and moral stories.</p>
-        <a href="stories.html" class="text-blue-600 underline">Read Stories</a>
+      <div class="bg-white rounded-xl shadow-md p-4 hover:scale-105 transition text-center">
+        <img src="assets/images/worksheets.png" class="h-32 mx-auto mb-3" alt="Worksheets">
+        <h4 class="text-lg font-bold text-purple-800">Worksheets</h4>
+        <p>Printable activity sheets for all age groups.</p>
+        <a href="worksheets.html" class="text-blue-600 underline">Download</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- E-commerce Features -->
+  <section class="p-6 max-w-7xl mx-auto mt-10">
+    <h3 class="text-2xl font-bold text-purple-900 mb-4">🛍️ Featured Products</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl shadow-md p-4 hover:scale-105 transition text-center">
+        <img src="assets/images/toy1.jpg" class="h-40 mx-auto mb-3" alt="Toy 1">
+        <h4 class="text-lg font-bold text-purple-800">Colorful Building Blocks</h4>
+        <p class="text-green-600 font-semibold">₹499</p>
+        <a href="shop.html" class="text-blue-600 underline">View Product</a>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-4 hover:scale-105 transition text-center">
+        <img src="assets/images/makeup1.jpg" class="h-40 mx-auto mb-3" alt="Makeup Kit">
+        <h4 class="text-lg font-bold text-purple-800">Kids Makeup Kit</h4>
+        <p class="text-green-600 font-semibold">₹399</p>
+        <a href="shop.html" class="text-blue-600 underline">View Product</a>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-4 hover:scale-105 transition text-center">
+        <img src="assets/images/toy2.jpg" class="h-40 mx-auto mb-3" alt="Toy 2">
+        <h4 class="text-lg font-bold text-purple-800">Wooden Puzzle Board</h4>
+        <p class="text-green-600 font-semibold">₹299</p>
+        <a href="shop.html" class="text-blue-600 underline">View Product</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="bg-yellow-300 text-center p-4 mt-10 text-purple-900">
-    &copy; 2025 Bachon Ki Duniya. All rights reserved.
+    © 2025 Bachon Ki Duniya. Learn • Play • Shop.
   </footer>
+
 </body>
 </html>
