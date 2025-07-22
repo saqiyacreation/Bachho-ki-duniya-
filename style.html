@@ -1,74 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bacho Ki Duniya</title>
-  <!-- Fun fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">🧒 Bacho Ki Duniya</div>
-    <nav>
-      <a href="stories.html">📚 Stories</a>
-      <a href="poems.html">🎵 Poems</a>
-      <a href="activities.html">🎮 Games</a>
-      <a href="login.html">🔐 Login</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Learn • Laugh • Play!</h1>
-    <img src="assets/images/kids-hero.png" alt="Happy Kids" />
-  </section>
-
-  <section class="cards">
-    <a class="card story" href="stories.html">📖 Stories</a>
-    <a class="card poem" href="poems.html">🎵 Poems</a>
-    <a class="card game" href="activities.html">🎨 Games</a>
-  </section>
-
-  <footer>
-    <p>© 2025 Bacho Ki Duniya • Fun & Learning for Kids</p>
-  </footer>
-</body>
-</html>
-/* Fonts & Reset */
-body, h1, p, a { margin:0; padding:0; }
-body { font-family: 'Baloo 2', cursive; background: #e0f7fa; }
-
-/* Header */
-header { display:flex; justify-content:space-between; align-items:center;
-  background:#00acc1; padding:15px; box-shadow:0 4px 8px rgba(0,0,0,0.2);
+body {
+  font-family: 'Comic Sans MS', cursive;
+  background-color: #fff7e6;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
-header .logo { font-size:1.8rem; color:#fff; }
-nav a { margin-left:12px; color:white; font-size:1.1rem; text-decoration:none;
-  padding:8px 12px; border-radius:8px;
-  transition: background .3s;
-}
-nav a:hover { background: #00838f; }
 
-/* Hero Section */
-.hero { text-align:center; padding:40px 20px;
-  background: linear-gradient(135deg, #fff59d, #ffe082);
-  box-shadow: inset 0 -4px 8px rgba(0,0,0,0.1);
+header {
+  background-color: #ffcb05;
+  padding: 20px;
+  text-align: center;
 }
-.hero h1 { font-size:2.5rem; color:#5d4037; }
-.hero img { width:60%; max-width:350px; margin-top:20px; }
 
-/* Cards Section */
-.cards { display:flex; justify-content:center; gap:20px; margin:30px 0; flex-wrap:wrap; }
+header h1 {
+  margin: 0;
+  color: #4b0082;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
 .card {
-  flex: 1 1 200px; text-decoration:none; padding:30px;
-  font-size:1.3rem; color:white; text-align:center; border-radius:16px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.15); transition: transform .2s;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ddd;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #000;
+  text-decoration: none;
 }
-.card.story { background:#ff7043; }
-.card.poem { background:#ab47bc; }
-.card.game { background:#29b6f6; }
-.card:hover { transform: translateY(-6px); }
 
-/* Footer */
-footer { text-align:center; padding:15px; background:#00acc1; color:#fff; font-size:1rem; }
+footer {
+  background: #4b0082;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
