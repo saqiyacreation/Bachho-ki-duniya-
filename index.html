@@ -2,41 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bacho Ki Duniya</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bachon Ki Duniya - Learn with Fun!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Welcome to Bacho Ki Duniya 🎉</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="stories.html">Stories</a></li>
-        <li><a href="poems.html">Poems</a></li>
-        <li><a href="activities.html">Games</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+<body class="bg-yellow-50 font-sans">
+  <header class="bg-yellow-300 p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-purple-800">Bachon Ki Duniya</h1>
+      <nav class="space-x-4">
+        <a href="#" class="text-purple-700 hover:underline">Home</a>
+        <a href="worksheets.html" class="text-purple-700 hover:underline">Worksheets</a>
+        <a href="games.html" class="text-purple-700 hover:underline">Games</a>
+        <a href="stories.html" class="text-purple-700 hover:underline">Stories</a>
+        <a href="login.html" class="text-purple-700 hover:underline">Login</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Learn, Laugh, and Play!</h2>
-      <p>Stories, poems, and fun for kids aged 1–8 years.</p>
-      <img src="assets/images/kids-hero.png" alt="Happy Kids" />
+  <main class="container mx-auto p-6">
+    <section class="text-center my-10">
+      <h2 class="text-3xl font-bold text-purple-900 mb-4">Welcome to the World of Fun Learning!</h2>
+      <p class="text-lg text-purple-700">Explore stories, games, and activities for kids aged 1 to 8.</p>
     </section>
-    <section class="quick-links">
-      <a href="stories.html" class="card">📖 Stories</a>
-      <a href="poems.html" class="card">🎵 Poems</a>
-      <a href="activities.html" class="card">🎨 Games</a>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl shadow-md p-4 text-center hover:scale-105 transition">
+        <h3 class="text-xl font-semibold text-purple-800">Worksheets</h3>
+        <p>Printable activities for all age groups.</p>
+        <a href="worksheets.html" class="text-blue-600 underline">Explore</a>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-4 text-center hover:scale-105 transition">
+        <h3 class="text-xl font-semibold text-purple-800">Games</h3>
+        <p>Fun learning through interactive games.</p>
+        <a href="games.html" class="text-blue-600 underline">Play Now</a>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-4 text-center hover:scale-105 transition">
+        <h3 class="text-xl font-semibold text-purple-800">Stories</h3>
+        <p>Enjoy bedtime and moral stories.</p>
+        <a href="stories.html" class="text-blue-600 underline">Read Stories</a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Bacho Ki Duniya | Made with ❤️ for Kids</p>
+  <footer class="bg-yellow-300 text-center p-4 mt-10 text-purple-900">
+    &copy; 2025 Bachon Ki Duniya. All rights reserved.
   </footer>
 </body>
 </html>
