@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stories | Bacho Ki Duniya</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+    header {
+      background-color: #ff69b4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .filters {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .filters input,
+    .filters select {
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .story-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .story-card:hover {
+      transform: translateY(-5px);
+    }
+    .story-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .story-content {
+      padding: 15px;
+    }
+    .story-content h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .story-content a {
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      color: #fff;
+      background: #28a745;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explore Fun & Moral Stories</h1>
+  </header>
+
+  <div class="filters">
+    <input type="text" id="searchInput" placeholder="Search stories...">
+    <select id="ageFilter">
+      <option value="">All Ages</option>
+      <option value="3-5">Age 3–5</option>
+      <option value="6-8">Age 6–8</option>
+    </select>
+  </div>
+
+  <div class="story-grid" id="storyGrid">
+    <!-- Story Cards (Example) -->
+    <div class="story-card" data-age="3-5" data-title="The Clever Rabbit">
+      <img src="stories.jpg" alt="Story Image">
+      <div class="story-content">
+        <h3>The Clever Rabbit</h3>
+        <a href="story-1.html">Read More</a>
+      </div>
+    </div>
+    <div class="story-card" data-age="6-8" data-title="Brave Little Turtle">
+      <img src="stories.jpg" alt="Story Image">
+      <div class="story-content">
+        <h3>Brave Little Turtle</h3>
+        <a href="story-2.html">Read More</a>
+      </div>
+    </div>
+    <div class="story-card" data-age="3-5" data-title="The Lion and the Mouse">
+      <img src="stories.jpg" alt="Story Image">
+      <div class="story-content">
+        <h3>The Lion and the Mouse</h3>
+        <a href="story-3.html">Read More</a>
+      </div>
+    </div>
+    <!-- Add more story cards here -->
+  </div>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const ageFilter = document.getElementById("ageFilter");
+    const cards = document.querySelectorAll(".story-card");
+
+    function filterStories() {
+      const keyword = searchInput.value.toLowerCase();
+      const age = ageFilter.value;
+
+      cards.forEach(card => {
+        const title = card.getAttribute("data-title").toLowerCase();
+        const cardAge = card.getAttribute("data-age");
+        const matchesKeyword = title.includes(keyword);
+        const matchesAge = !age || cardAge === age;
+
+        if (matchesKeyword && matchesAge) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    searchInput.addEventListener("input", filterStories);
+    ageFilter.addEventListener("change", filterStories);
+  </script>
+
+</body>
+</html>
