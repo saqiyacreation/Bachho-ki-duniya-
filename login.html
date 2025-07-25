@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Login - Bachon Ki Duniya</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-blue-100">
-  <div class="max-w-md mx-auto mt-20 p-8 bg-white shadow-xl rounded-xl">
-    <h2 class="text-2xl font-bold text-center text-blue-800 mb-6">Login to Your Account</h2>
-    <input id="email" type="email" placeholder="Email" class="w-full p-3 border rounded mb-4" />
-    <input id="password" type="password" placeholder="Password" class="w-full p-3 border rounded mb-4" />
-    <button onclick="login()" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Login</button>
-    <p class="mt-4 text-center text-sm">Don't have an account? <a href="signup.html" class="text-purple-500">Sign up</a></p>
-  </div>
-
+  <title>Bacho Ki Duniya - Login / Signup</title>
   <script type="module">
-    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-    import { auth } from './scripts/firebase-config.js';
+    // Firebase SDK imports
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
 
+    // Your Firebase Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyD9fTRY2S7kRSxz-pQ8YFNvy3VPGbxLogA",
+      authDomain: "bacho-ki-duniya-a2bcf.firebaseapp.com",
+      projectId: "bacho-ki-duniya-a2bcf",
+      storageBucket: "bacho-ki-duniya-a2bcf.firebasestorage.app",
+      messagingSenderId: "493564401334",
+      appId: "1:493564401334:web:caeb003d035a1b23177817",
+      measurementId: "G-JQJ3KRQN5R"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Login Function
     window.login = function () {
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
@@ -25,12 +30,33 @@
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           alert("Login successful!");
-          window.location.href = "dashboard.html";
+          // redirect or show dashboard
         })
         .catch((error) => {
-          alert(error.message);
+          alert("Login failed: " + error.message);
         });
-    }
+    };
+
+    // Signup Function
+    window.signup = function () {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("Signup successful!");
+        })
+        .catch((error) => {
+          alert("Signup failed: " + error.message);
+        });
+    };
   </script>
+</head>
+<body>
+  <h2>Login / Signup - Bacho Ki Duniya</h2>
+  <input type="email" id="email" placeholder="Enter email" /><br><br>
+  <input type="password" id="password" placeholder="Enter password" /><br><br>
+  <button onclick="login()">Login</button>
+  <button onclick="signup()">Sign Up</button>
 </body>
 </html>
