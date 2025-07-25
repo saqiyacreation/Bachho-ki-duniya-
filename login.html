@@ -28,9 +28,10 @@
       const password = document.getElementById("password").value;
 
       signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          alert("Login successful!");
-          // redirect or show dashboard
+        ..then((userCredential) => {
+  alert("Login successful!");
+  window.location.href = "dashboard.html"
+})
         })
         .catch((error) => {
           alert("Login failed: " + error.message);
