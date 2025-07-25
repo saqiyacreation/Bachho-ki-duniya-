@@ -5,8 +5,8 @@
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
     import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 
-    // Firebase config
     const firebaseConfig = {
       apiKey: "AIzaSyD9fTRY2S7kRSxz-pQ8YFNvy3VPGbxLogA",
       authDomain: "bacho-ki-duniya-a2bcf.firebaseapp.com",
@@ -17,11 +17,53 @@
       measurementId: "G-JQJ3KRQN5R"
     };
 
-    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
+    const db = getFirestore(app);
 
-    // Check if user is logged in
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, async (user) => {
       if (user) {
-        document.getElementById("welcome").innerText =
+        document.getElementById("welcome").innerText = `Welcome, ${user.email}`;
+
+        // Get user role from Firestore
+        const docRef = doc(db, "users", user.email); // use email as document ID
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          const role = docSnap.data().role;
+          document.getElementById("role").innerText = `Your Plan: ${role.toUpperCase()}`;
+
+          if (role === "premium") {
+            document.getElementById("premiumContent").style.display = "block";
+          }
+        } else {
+          document.getElementById("role").innerText = "Your Plan: FREE (default)";
+        }
+
+      } else {
+        window.location.href = "login.html";
+      }
+    });
+
+    window.logout = function () {
+      signOut(auth).then(() => {
+        alert("Logged out successfully");
+        window.location.href = "login.html";
+      });
+    };
+  </script>
+</head>
+<body>
+  <h2>Bacho Ki Duniya - Dashboard</h2>
+  <p id="welcome">Checking login...</p>
+  <p id="role">Checking subscription...</p>
+
+  <div id="premiumContent" style="display:none;">
+    <h3>🎉 Premium Content Area</h3>
+    <p>Here you'll get activity sheets, exclusive videos, etc.</p>
+  </div>
+
+  <br><br>
+  <button onclick="logout()">Logout</button>
+</body>
+</html>
